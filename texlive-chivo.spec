@@ -1,5 +1,5 @@
 Name:		texlive-chivo
-Version:	54512
+Version:	65029
 Release:	1
 Summary:	Using the free Chivo fonts with LaTeX
 Group:		Publishing
