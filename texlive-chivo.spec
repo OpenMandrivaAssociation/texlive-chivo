@@ -1,6 +1,6 @@
 Name:		texlive-chivo
 Version:	65029
-Release:	1
+Release:	2
 Summary:	Using the free Chivo fonts with LaTeX
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chivo
