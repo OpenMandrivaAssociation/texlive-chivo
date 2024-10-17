@@ -3,7 +3,7 @@ Version:	65029
 Release:	2
 Summary:	Using the free Chivo fonts with LaTeX
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/chivo
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/chivo
 License:	ofl lppl1.3c
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chivo.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/chivo.doc.r%{version}.tar.xz
