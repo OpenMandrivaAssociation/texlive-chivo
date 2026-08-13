@@ -1,9 +1,10 @@
 %global tl_name chivo
 %global tl_revision 78931
+%global tl_version 2.2
 
 Name:		texlive-%{tl_name}
 Epoch:		1
-Version:	2.2
+Version:	%{tl_version}
 Release:	%{tl_revision}.1
 Summary:	Using the free Chivo fonts with LaTeX
 Group:		Publishing
@@ -14,7 +15,8 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chivo.doc.r%{tl_
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/chivo.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 This work provides the necessary files to use the Chivo fonts with
@@ -22,3 +24,10 @@ LaTeX. Chivo is a set of eight fonts provided by Hector Gatti & Omnibus
 Team under the Open Font License (OFL), version 1.1. The fonts are
 copyright (c) 2011-2019, Omnibus-Type.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from chivo:
+Map Chivo.map
+TL_DROPIN_EOF
